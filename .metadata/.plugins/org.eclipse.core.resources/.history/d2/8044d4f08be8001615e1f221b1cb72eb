@@ -1,0 +1,40 @@
+package org.usfirst.frc.team6317.robot.commands;
+
+import org.usfirst.frc.team6317.robot.OI;
+import org.usfirst.frc.team6317.robot.Robot;
+import edu.wpi.first.wpilibj.command.Command;
+
+public class WinchCommand extends Command {
+
+	public WinchCommand(){
+		this.requires(Robot.WinchSystem);
+	}
+	
+	protected void initialize(){
+	}
+	
+	protected void execute(){
+		if(OI.leftStick.getPOV() == 0)
+			Robot.WinchSystem.goingUp();
+		else if(OI.leftStick.getPOV() == 180)
+			Robot.WinchSystem.goingDown();
+		else
+			Robot.WinchSystem.stopWinch();
+	}
+	
+	@Override
+	protected boolean isFinished() {
+		Robot.WinchSystem.stopWinch();
+		return false;
+	}
+
+	@Override
+	protected void end() {
+		Robot.WinchSystem.stopWinch();
+	}
+
+	@Override
+	protected void interrupted() {
+		Robot.WinchSystem.stopWinch();
+	}
+}

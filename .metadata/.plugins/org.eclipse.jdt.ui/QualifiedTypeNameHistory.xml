@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.CounterBase.EncodingType"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.livewindow.LiveWindow"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Encoder"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.ShootingAuto"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.CommandGroup"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Robot"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.RobotMap"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.GyroTest"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.Command"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.AutoBallBinAndShoot"/>
+</qualifiedTypeNameHistroy>

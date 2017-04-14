@@ -1,0 +1,18 @@
+package org.usfirst.frc.team6317.robot.commands;
+
+import edu.wpi.first.wpilibj.command.CommandGroup;
+
+public class AutoBallBinAndShoot extends CommandGroup {
+	
+	public AutoBallBinAndShoot() {
+		
+		//													 time, speed (or left speed, right speed)
+		this.addSequential(new DriftCompensatingDriveCommand(0.5, -0.25)); //back up
+		this.addSequential(new DriftCompensatingDriveCommand(0.6, 1.0, 0.2)); //turn right
+		this.addSequential(new DriftCompensatingDriveCommand(0.5, 1.0, -1.0)); //turn right around center
+		this.addSequential(new DriftCompensatingDriveCommand(3.5, 0.3)); //drive forward
+		
+		this.addParallel(new KickCommand(), 9);
+		this.addSequential(new ShooterCommand(false), 9);
+	}
+}

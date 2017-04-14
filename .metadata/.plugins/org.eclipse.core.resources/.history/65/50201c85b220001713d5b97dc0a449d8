@@ -1,0 +1,38 @@
+package org.usfirst.frc.team6317.robot.commands;
+
+import org.usfirst.frc.team6317.robot.Robot;
+
+import edu.wpi.first.wpilibj.command.Command;
+
+public class GyroTurnCommand extends Command {
+	private final int target, threshold;
+	private final double speed;
+	private boolean done = false;
+	private final boolean left, right;
+	
+	public GyroTurnCommand(int targetHeading, int threshold, double speed, boolean useLeft, boolean useRight) {
+		if (!useLeft && !useRight) throw new IllegalArgumentException("Must use at least one side");
+		this.target = targetHeading;
+		this.threshold = threshold;
+		this.speed = speed;
+		this.left = useLeft;
+		this.right = useRight;
+	}
+	
+	public GyroTurnCommand(int targetHeading, int threshold, double speed) {
+		this(targetHeading, threshold, speed, true, true);
+	}
+
+	@Override
+	protected void execute() {
+		if (Math.abs(target - Robot.gyro.getZHeading()) > threshold) {
+			
+		} else this.done = true;
+	}
+	
+	@Override
+	protected boolean isFinished() {
+		return this.done;
+	}
+
+}
