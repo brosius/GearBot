@@ -5264,3 +5264,545 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY WPILib_Java_Robot_Development 1 0 2017-04-15 16:01:15.077
 !MESSAGE Updating projects
+!SESSION 2017-04-18 15:34:56.700 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-18 15:35:38.665
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Computer Science'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-18 15:35:44.035
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-18 15:35:44.036
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-18 15:35:44.068
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-18 15:35:44.082
+!MESSAGE Installedcpp
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2017-04-18 15:35:44.085
+!MESSAGE Updating projects
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-18 15:35:44.171
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-18 15:35:44.172
+!MESSAGE Installedjava
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-18 15:35:44.174
+!MESSAGE Updating projects
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-18 15:38:06.505
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-18 15:38:06.510
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-18 15:46:15.429
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-18 15:46:15.433
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-18 15:46:27.255
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-18 15:46:27.256
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-18 15:46:27.465
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-18 15:46:27.473
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-18 15:55:13.518
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-18 15:55:13.519
+!MESSAGE Targets: deploy, Mode: run
+!SESSION 2017-04-20 16:51:13.597 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-20 16:51:38.325
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Computer Science'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-20 16:51:40.453
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-20 16:51:40.453
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-20 16:51:40.457
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-20 16:51:40.463
+!MESSAGE Installedcpp
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2017-04-20 16:51:40.464
+!MESSAGE Updating projects
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-20 16:51:40.471
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-20 16:51:40.472
+!MESSAGE Installedjava
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 16:51:40.473
+!MESSAGE Updating projects
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 16:56:17.370
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 16:56:17.376
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:02:37.857
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:02:37.858
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-20 17:02:38.287
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-20 17:02:38.290
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:05:33.589
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:05:33.589
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:07:47.386
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:07:47.387
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:08:36.041
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:08:36.042
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-20 17:09:53.039
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-20 17:09:53.041
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:10:08.828
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:10:08.828
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:17:41.145
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:17:41.146
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:19:49.635
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:19:49.636
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:22:19.961
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:22:19.962
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:25:26.577
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:25:26.578
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:28:29.866
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:28:29.867
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:29:40.432
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:29:40.433
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:31:04.905
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:31:04.906
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:32:27.241
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:32:27.242
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:41:42.914
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:41:42.915
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:42:55.686
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:42:55.687
+!MESSAGE Targets: deploy, Mode: run
+!SESSION 2017-04-20 17:50:44.641 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-04-20 17:50:59.142
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Computer Science'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-20 17:51:01.342
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-20 17:51:01.342
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-20 17:51:01.357
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-20 17:51:01.357
+!MESSAGE Installedcpp
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2017-04-20 17:51:01.357
+!MESSAGE Updating projects
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-20 17:51:01.373
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2017-04-20 17:51:01.373
+!MESSAGE Installedjava
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 17:51:01.373
+!MESSAGE Updating projects
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:12:26.165
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:12:26.165
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:13:35.826
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:13:35.842
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-20 18:13:35.998
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-20 18:13:36.013
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:14:34.738
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:14:34.738
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-04-20 18:26:34.852
+!MESSAGE Connection to http://download.eclipse.org/releases/neon/201612211000/content.xml.xz failed on download.eclipse.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-20 18:26:35.091
+!MESSAGE Unknown Host: http://download.eclipse.org/releases/neon/201612211000/content.xml.xz
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-20 18:26:40.179
+!MESSAGE Unknown Host: http://download.eclipse.org/releases/neon/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-20 18:26:45.258
+!MESSAGE Unknown Host: http://entirej.org/entirej/plugin/updatesite/releases/r4.x/content.xml
+!STACK 0
+java.net.UnknownHostException: entirej.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-20 18:26:45.335
+!MESSAGE Unknown Host: http://download.eclipse.org/eclipse/updates/4.6/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-20 18:26:45.414
+!MESSAGE Unknown Host: http://download.eclipse.org/oomph/updates/milestone/latest/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-20 18:26:45.480
+!MESSAGE Unknown Host: http://download.eclipse.org/webtools/repository/neon/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-20 18:26:47.803
+!MESSAGE Unknown Host: http://first.wpi.edu/FRC/roborio/release/eclipse/content.xml
+!STACK 0
+java.net.UnknownHostException: first.wpi.edu
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:33:54.540
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:33:54.540
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:36:10.615
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:36:10.615
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-20 18:38:29.248
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-20 18:38:29.263
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:41:01.451
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:41:01.451
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:42:17.746
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:42:17.746
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:44:05.060
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:44:05.060
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:45:21.935
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:45:21.935
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:54:48.913
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:54:48.913
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:59:35.111
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 18:59:35.111
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:02:54.854
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:02:54.854
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:19:04.402
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:19:04.402
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:22:12.461
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:22:12.461
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:23:00.138
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:23:00.138
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:26:06.816
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:26:06.816
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:34:34.521
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:34:34.521
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:40:40.723
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:40:40.723
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:43:12.513
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:43:12.513
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:49:42.304
+!MESSAGE Running ant file: C:\Users\Computer Science\Desktop\GitHub Repository\GearBot\TestBot\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2017-04-20 19:49:42.304
+!MESSAGE Targets: deploy, Mode: run
