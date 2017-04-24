@@ -12,9 +12,9 @@ public class AutoBallBinAndShoot extends CommandGroup {
 		//this.addSequential(new DriftCompensatingDriveCommand(2, -0.5)); //back up
 		this.addSequential(new DriveEncoderCommand(104, -0.70));
 		this.addSequential(new GyroCalibrateCommand(0.5));
-		this.addSequential(new GyroTurnCommand(45, 2, 0.35, true, false));//first num degrees, second how many degrees it can be off, third speed
+		this.addSequential(new GyroTurnCommand(45, 1, 0.35, true, false));//first num degrees, second how many degrees it can be off, third speed
 		this.addSequential(new WaitCommand(0.5));
-		this.addSequential(new DriveEncoderCommand(24, 0.25)); //drive forward for 24" this will need to be adjusted
+		this.addSequential(new DriveEncoderCommand(8, 0.1)); //drive forward for 24" this will need to be adjusted
 		this.addParallel(new KickCommand());
 		this.addSequential(new ShooterCommand(false));
 	}
