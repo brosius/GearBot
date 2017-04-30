@@ -18,7 +18,7 @@ public class DriveEncoderCommand extends Command {
 	
 	@Override
 	protected void initialize() {
-		Robot.DriveTrain.enc.setReverseDirection(false);
+		Robot.DriveTrain.enc.setReverseDirection(true);
 		Robot.DriveTrain.enc.setDistancePerPulse(128 / 2743.0);//6 * Math.PI / (1440.0 * (5/6.0))); // 6in diameter wheels, 1440 pulses per revolution 
 		Robot.DriveTrain.enc.reset();
 	}
@@ -28,8 +28,8 @@ public class DriveEncoderCommand extends Command {
 		//Robot.DriveTrain.forward(speed);
 		RobotMap.leftDrive1.set(speed);
 		RobotMap.leftDrive2.set(speed);
-		RobotMap.rightDrive1.set(-speed * 0.68);//this sets the callibration for drift compensation for encoder auto
-		RobotMap.rightDrive2.set(-speed * 0.68);//this sets the callibration for drift compensation for encoder auto
+		RobotMap.rightDrive1.set(-speed * 0.85);//this sets the callibration for drift compensation for encoder auto
+		RobotMap.rightDrive2.set(-speed * 0.85);//this sets the callibration for drift compensation for encoder auto
 		SmartDashboard.putNumber("LeftEncoder", Robot.DriveTrain.enc.getDistance());
 	}
 
