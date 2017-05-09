@@ -11,4 +11,5 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.Command"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.AutoBallBinAndShoot"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.AllianceColor"/>
 </qualifiedTypeNameHistroy>
