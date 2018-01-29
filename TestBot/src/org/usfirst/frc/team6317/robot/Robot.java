@@ -1,3 +1,4 @@
+
 package org.usfirst.frc.team6317.robot;
 
 import org.usfirst.frc.team6317.robot.commands.AutoBallBinAndShoot;
@@ -27,9 +28,12 @@ public class Robot extends IterativeRobot {
     
 	//initializes subsystems
 	public static final DriveTrain DriveTrain = new DriveTrain();
+	public static final AirSystem AirSystem = new AirSystem();
 	public static final IntakeSystem IntakeSystem = new IntakeSystem();
 	public static final WinchSystem WinchSystem = new WinchSystem();
+	public static final Shifter Shifter = new Shifter();
 	public static final Shooter Shooter = new Shooter();
+	public static final Distance DistanceU = new Distance();
 	public static final Kicker Kicker = new Kicker();
 	public static OI oi;
 	public static SpatialPhidgetGyroWrapper gyro;
