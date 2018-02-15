@@ -10,7 +10,7 @@ import org.usfirst.frc.team6317.robot.Robot;
 public class BreakInCommand extends Command {
 	public BreakInCommand() {
 		// Use requires() here to declare subsystem dependencies
-		requires(Robot.DriveSubsystem);
+//		requires(Robot.DriveSubsystem);
 	}
 
 	// Called just before this Command runs the first time

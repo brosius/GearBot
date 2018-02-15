@@ -3,23 +3,32 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Shifter extends Subsystem {
-	DoubleSolenoid solenoid = new DoubleSolenoid(2,3);
+	DoubleSolenoid arm = new DoubleSolenoid(1,2);
+	DoubleSolenoid piston = new DoubleSolenoid(3,4);
 	@Override
 	protected void initDefaultCommand() {
 		// TODO Auto-generated method stub
 		//nothing
 	}
 	
-	public void forwardShift(){ //Shifts forward
-		solenoid.set(DoubleSolenoid.Value.kForward);
+	public void openArm(){ //Shifts forward
+		arm.set(DoubleSolenoid.Value.kForward);
 	}
 	
-	public void backwardShift(){//Shifts reverse
-		solenoid.set(DoubleSolenoid.Value.kReverse);
+	public void closeArm(){//Shifts reverse
+		arm.set(DoubleSolenoid.Value.kReverse);
+	}
+	
+	public void firePiston() {
+		piston.set(DoubleSolenoid.Value.kForward);
+	}
+	
+	public void lowerPiston() {
+		piston.set(DoubleSolenoid.Value.kReverse);
 	}
 	
 	public void stopShift(){ //Turns off airflow
-		solenoid.set(DoubleSolenoid.Value.kOff);
-	}
-	
+		arm.set(DoubleSolenoid.Value.kOff);
+		piston.set(DoubleSolenoid.Value.kOff);
+	}	
 }

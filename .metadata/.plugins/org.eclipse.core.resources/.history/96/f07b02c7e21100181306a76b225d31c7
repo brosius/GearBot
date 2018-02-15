@@ -1,0 +1,39 @@
+package org.usfirst.frc.team6317.robot.commands;
+
+import org.usfirst.frc.team6317.robot.OI;
+import org.usfirst.frc.team6317.robot.RobotMap;
+
+import edu.wpi.first.wpilibj.SpeedController;
+import edu.wpi.first.wpilibj.Victor;
+import edu.wpi.first.wpilibj.command.Command;
+
+public class DriveCommand extends Command {
+	
+	private SpeedController leftOne = new Victor(RobotMap.leftOne);	
+	private SpeedController leftTwo = new Victor(RobotMap.leftTwo);	
+	private SpeedController rightOne = new Victor(RobotMap.rightOne);	
+	private SpeedController rightTwo = new Victor(RobotMap.rightTwo);
+	
+	// Called just before this Command runs the first time
+	@Override
+	protected void initialize() {
+		rightOne.setInverted(true);
+		rightTwo.setInverted(true);
+	}
+
+	// Called repeatedly when this Command is scheduled to run
+	@Override
+	protected void execute() {
+		leftOne.set(OI.leftStick.getY());
+		leftTwo.set(OI.leftStick.getY());
+		rightOne.set(OI.rightStick.getY());
+		rightTwo.set(OI.rightStick.getY());
+	}
+	
+	@Override
+	protected boolean isFinished() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

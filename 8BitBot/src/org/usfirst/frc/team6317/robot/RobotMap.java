@@ -10,19 +10,10 @@ import edu.wpi.first.wpilibj.Victor;
  * floating around.
  */
 public class RobotMap {
-	// For example to map the left and right motors, you could define the
-	// following variables to use with your drivetrain subsystem.
-	// public static int leftMotor = 1;
-	// public static int rightMotor = 2;
-
-	// If you are using multiple modules, make sure to define both the port
-	// number and the module. For example you with a rangefinder:
-	// public static int rangefinderPort = 1;
-	// public static int rangefinderModule = 1;
-	public static SpeedController rightDrive1 = new Victor(0);		//motor controller is set to pin 0
-	public static SpeedController rightDrive2 = new Victor(1);		//motor controller is set to pin 1
-	public static SpeedController leftDrive1 = new Victor(2);		//motor controller is set to pin 2
-	public static SpeedController leftDrive2 = new Victor(3);		//motor controller is set to pin 3
+	public static int rightOne = 0;
+	public static int rightTwo = 1;
+	public static int leftOne = 2;
+	public static int leftTwo = 3;
 	public static SpeedController intakeMotorBottom = new Victor(4);//lower intake motor using pin 4
 	public static SpeedController intakeMotorTop = new Victor(5);	//upper intake motor using pin 5
 	public static SpeedController leftMotorOne = new Victor(2);

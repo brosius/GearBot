@@ -19,11 +19,13 @@ public class SolenoidShift extends Command {
 	@Override
 	protected void execute() {
 		if(state == 0)
-			Robot.Shifter.forwardShift();		
+			Robot.Shifter.openArm();		
 		if(state == 1)
-			Robot.Shifter.backwardShift();
-		if(state == 2)
-			Robot.Shifter.stopShift();
+			Robot.Shifter.closeArm();
+		if (state == 3)
+			Robot.Shifter.firePiston();
+		if (state == 4)
+			Robot.Shifter.lowerPiston();
 
 	}
 

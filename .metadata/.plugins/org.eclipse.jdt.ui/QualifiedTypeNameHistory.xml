@@ -15,10 +15,8 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.subsystems.Shifter"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Ultrasonic"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SpeedController"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Victor"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.buttons.JoystickButton"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.RobotMap"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.subsystems.DriveSubsystem"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Robot"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick.ButtonType"/>
@@ -34,4 +32,7 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.Subsystem"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.DistanceTesting"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.SolenoidShift"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SpeedController"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.RobotMap"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.OI"/>
 </qualifiedTypeNameHistroy>
