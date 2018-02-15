@@ -8,7 +8,7 @@ public class SolenoidShift extends Command {
 	public int state;
 	
 	public SolenoidShift(int stateIn) {
-		this.requires(Robot.IntakeSystem);
+		this.requires(Robot.Shifter);
 		state = stateIn;
 	}
 	
