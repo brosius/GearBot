@@ -1,16 +1,10 @@
 
 package org.usfirst.frc.team6317.robot;
 
-
-//import org.usfirst.frc.team6317.robot.commands.DistanceTesting;
+import org.usfirst.frc.team6317.robot.commands.*;
 import org.usfirst.frc.team6317.robot.subsystems.*;
-//import org.usfirst.frc.team6317.robot.sensors.SpatialPhidgetGyroWrapper;
-//import com.phidgets.PhidgetException;
-//import com.phidgets.SpatialPhidget;
-//import com.phidgets.event.AttachEvent;
-//import com.phidgets.event.AttachListener;
-//
-//import edu.wpi.first.wpilibj.CameraServer;
+
+import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -27,24 +21,33 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * directory.
  */
 public class Robot extends IterativeRobot {
+	public static final DriveSubsystem DriveSubsystem = new DriveSubsystem();
 	public static final Shifter Shifter = new Shifter();
 	public static final Subsystem IntakeSystem = null;
+	public static final SensorsSubsystem SensorSubsystem = new SensorsSubsystem();
+	public static final LiftSubsystem LiftSubsystem = new LiftSubsystem();
 	public static OI oi;
-
+	
+	@SuppressWarnings("rawtypes")
+	SendableChooser autoChooser;
 	Command autonomousCommand;
-	SendableChooser<Command> chooser = new SendableChooser<>();
+	
 
 	/**
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked"})
 	@Override
 	public void robotInit() {
 		oi = new OI();
-//		chooser.addDefault("Default Auto", new BreakInCommand());
-		//chooser.addDefault("Default Auto", new DistanceTesting());
-		// chooser.addObject("My Auto", new MyAutoCommand());
-		SmartDashboard.putData("Auto mode", chooser);
+		
+		CameraServer.getInstance().startAutomaticCapture();
+		
+		autoChooser = new SendableChooser();
+		autoChooser.addDefault("Drive Until", new DriveUntil(30));
+		autoChooser.addObject("Test Autonomous", new TestAuto());
+		SmartDashboard.putData("Auto mode", autoChooser);
 	}
 
 	/**
@@ -75,7 +78,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousInit() {
-		autonomousCommand = chooser.getSelected();
+		autonomousCommand = (Command) autoChooser.getSelected();
 
 		/*
 		 * String autoSelected = SmartDashboard.getString("Auto Selector",
@@ -105,7 +108,6 @@ public class Robot extends IterativeRobot {
 		// this line or comment it out.
 		if (autonomousCommand != null)
 			autonomousCommand.cancel();
-		//SmartDashboard.putNumber("Distance One", analogSubsystem.getDistance());
 	}
 
 	/**

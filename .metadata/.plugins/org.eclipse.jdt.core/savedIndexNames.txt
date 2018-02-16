@@ -11,7 +11,6 @@ INDEX VERSION 1.130+C:\Users\Computer Science\Desktop\PowerUp\GearBot\.metadata\
 1866730069.index
 922380862.index
 148619430.index
-3177743059.index
 2272273464.index
 3333681219.index
 648612256.index
