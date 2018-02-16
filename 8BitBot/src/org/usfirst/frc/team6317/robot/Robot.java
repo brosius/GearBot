@@ -5,6 +5,7 @@ import org.usfirst.frc.team6317.robot.commands.*;
 import org.usfirst.frc.team6317.robot.subsystems.*;
 
 import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -45,7 +46,7 @@ public class Robot extends IterativeRobot {
 		CameraServer.getInstance().startAutomaticCapture();
 		
 		autoChooser = new SendableChooser();
-		autoChooser.addDefault("Drive Until", new DriveUntil(30));
+		autoChooser.addDefault("Middle Auto", new MiddleAutonomous());
 		autoChooser.addObject("Test Autonomous", new TestAuto());
 		SmartDashboard.putData("Auto mode", autoChooser);
 	}
@@ -79,7 +80,8 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void autonomousInit() {
 		autonomousCommand = (Command) autoChooser.getSelected();
-
+		autonomousCommand.start();
+		String gameData = DriverStation.getInstance().getGameSpecificMessage();
 		/*
 		 * String autoSelected = SmartDashboard.getString("Auto Selector",
 		 * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
