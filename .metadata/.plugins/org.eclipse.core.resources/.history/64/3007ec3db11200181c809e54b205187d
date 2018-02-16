@@ -16,7 +16,7 @@ public class LiftSubsystem extends Subsystem {
 		setDefaultCommand(new DefaultLiftCommand());
 	}
 	
-	public void setLift(double speed) {
+	public void set(double speed) {
 		liftMotor.set(speed);
 	}
 	
