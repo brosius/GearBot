@@ -1,0 +1,23 @@
+package org.usfirst.frc.team6317.robot.commands;
+
+import org.usfirst.frc.team6317.robot.Robot;
+import org.usfirst.frc.team6317.robot.RobotMap;
+
+import edu.wpi.first.wpilibj.command.Command;
+
+public class TurnFor extends Command {
+	@Override
+	protected void initialize() {
+		if (!isFinished()) Robot.DriveSubsystem.drive(-0.2, 0.2);
+	}
+
+	@Override
+	protected boolean isFinished() {
+		return false;
+	}
+
+	@Override
+	protected void end() {
+		Robot.DriveSubsystem.stop();
+	}
+}
