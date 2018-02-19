@@ -1075,3 +1075,4 @@ Caused by: java.net.URISyntaxException: Illegal character in query at index 262:
 	at java.net.URI.<init>(Unknown Source) ~[na:1.8.0_161]
 	at org.apache.http.impl.client.DefaultRedirectStrategy.createLocationURI(DefaultRedirectStrategy.java:186) ~[na:na]
 	... 26 common frames omitted
+2018-02-19 08:07:44,367 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

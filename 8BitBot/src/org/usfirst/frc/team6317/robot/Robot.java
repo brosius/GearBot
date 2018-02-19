@@ -47,7 +47,8 @@ public class Robot extends IterativeRobot {
 		
 		autoChooser = new SendableChooser();
 		autoChooser.addDefault("Middle Auto", new MiddleAutonomous());
-		autoChooser.addObject("Test Autonomous", new TestAuto());
+		autoChooser.addObject("Closest Switch", new MiddleAutonomous());
+		autoChooser.addObject("Middle Scale", new DriveUntil(30));
 		SmartDashboard.putData("Auto mode", autoChooser);
 	}
 
@@ -77,11 +78,12 @@ public class Robot extends IterativeRobot {
 	 * chooser code above (like the commented example) or additional comparisons
 	 * to the switch structure below with additional strings & commands.
 	 */
+	public static String gameData = "";
 	@Override
 	public void autonomousInit() {
+		gameData = DriverStation.getInstance().getGameSpecificMessage();
 		autonomousCommand = (Command) autoChooser.getSelected();
 		autonomousCommand.start();
-		String gameData = DriverStation.getInstance().getGameSpecificMessage();
 		/*
 		 * String autoSelected = SmartDashboard.getString("Auto Selector",
 		 * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand

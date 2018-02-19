@@ -14,10 +14,6 @@ public class SolenoidShift extends Command {
 	
 	@Override
 	protected void initialize() {
-	}
-
-	@Override
-	protected void execute() {
 		if(state == 0)
 			Robot.Shifter.openArm();		
 		if(state == 1)
@@ -26,12 +22,19 @@ public class SolenoidShift extends Command {
 			Robot.Shifter.firePiston();
 		if (state == 4)
 			Robot.Shifter.lowerPiston();
+		if (state == 5 && Robot.SensorSubsystem.getDistanceCenti() < 30)
+			Robot.Shifter.firePiston();
+	}
+
+	@Override
+	protected void execute() {
+		
 
 	}
 
 	@Override
 	protected boolean isFinished() {
-		return false;
+		return true;
 	}
 
 	@Override
