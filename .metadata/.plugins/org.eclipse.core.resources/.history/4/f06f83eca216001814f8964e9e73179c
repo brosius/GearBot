@@ -1,0 +1,32 @@
+package org.usfirst.frc.team6317.robot.commands;
+
+import org.usfirst.frc.team6317.robot.Robot;
+
+import edu.wpi.first.wpilibj.command.Command;
+
+public class TurnFor extends Command {
+	private final String direction;
+
+	public TurnFor(String turnDirection) {
+		direction = turnDirection;
+	}
+	
+	@Override
+	protected void initialize() {
+		if (!isFinished() && this.direction == "L") {
+			Robot.DriveSubsystem.drive(0, 0.2);
+		} else if (!isFinished() && this.direction == "R") {
+			Robot.DriveSubsystem.drive(0.2, 0);
+		}
+	}
+
+	@Override
+	protected boolean isFinished() {
+		return false;
+	}
+
+	@Override
+	protected void end() {
+		Robot.DriveSubsystem.stop();
+	}
+}

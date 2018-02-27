@@ -24,10 +24,21 @@ public class DriveSubsystem extends Subsystem {
 	}
 	
 	public void drive(double leftSpeed, double rightSpeed) {
-		leftDriveOne.set(leftSpeed * 0.9);
-		leftDriveTwo.set(leftSpeed * 0.9);
+		leftDriveOne.set(leftSpeed * 0.84);
+		leftDriveTwo.set(leftSpeed * 0.84);
 		rightDriveOne.set(rightSpeed);
 		rightDriveTwo.set(rightSpeed);
+	}
+	
+	public void backDrive(double leftSpeed, double rightSpeed) {
+		leftDriveOne.set(leftSpeed);
+		leftDriveTwo.set(leftSpeed);
+		rightDriveOne.set(rightSpeed * (2.13 * rightSpeed));
+		rightDriveTwo.set(rightSpeed * (2.13 * rightSpeed));//.2 speed 
+	}
+	
+	public void backDrive(double speed) {
+		backDrive(speed, speed);
 	}
 	
 	public void drive(double speed) {

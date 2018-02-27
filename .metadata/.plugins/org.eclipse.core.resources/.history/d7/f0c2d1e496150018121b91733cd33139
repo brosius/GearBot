@@ -1,0 +1,43 @@
+package org.usfirst.frc.team6317.robot.subsystems;
+
+import org.usfirst.frc.team6317.robot.RobotMap;
+
+import edu.wpi.first.wpilibj.AnalogInput;
+import edu.wpi.first.wpilibj.Encoder;
+import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+public class SensorsSubsystem extends Subsystem {
+	public AnalogInput frontDistanceSensor = new AnalogInput(RobotMap.AnalogInputs.FRONT_DISTANCE_SENSOR);
+	public AnalogInput rightDistanceSensor = new AnalogInput(RobotMap.AnalogInputs.RIGHT_DISTANCE_SENSOR);
+	public ANalogInput lefr
+	public Encoder leftEncoder = new Encoder(1,2);
+	public Encoder rightEncoder = new Encoder(3,4);
+	
+	// Encoder Values
+	private final int encodersPerRev = 1440;
+	private final int wheelDiameter = 6;
+	private final double wheelCircumference = 2 * Math.PI * wheelDiameter;
+	private final double gearRatio = 12.75;
+	
+	@Override
+	protected void initDefaultCommand() {}
+	
+	public double getDistanceCenti() {
+		double volts = distanceSensorOne.getVoltage();
+		double millivolts = volts * 1000;
+		double centimeters = millivolts / 4.9;
+		SmartDashboard.putNumber("Distance", centimeters);
+		return centimeters;
+	}
+	
+	public double getDistanceMilli() {
+		double volts = 
+		return null;
+	}
+	
+	public double getEncoders(double inches) {
+		double revolutionsNeeded = wheelCircumference * gearRatio * inches;
+		return 0.1;
+	}
+}

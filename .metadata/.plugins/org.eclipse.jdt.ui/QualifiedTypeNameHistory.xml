@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.CounterBase.EncodingType"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.livewindow.LiveWindow"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Encoder"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.ShootingAuto"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.CommandGroup"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.GyroTest"/>
@@ -17,7 +16,6 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.buttons.JoystickButton"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick.ButtonType"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.TeleopCommand"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.PowerDistributionPanel"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SerialPort"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SerialPort.Parity"/>
@@ -28,7 +26,6 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DoubleSolenoid.Value"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.Subsystem"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.BreakInCommand"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.RobotMap.AnalogInputs"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.RobotMap"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.DefaultLiftCommand"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.subsystems.LiftSubsystem"/>
@@ -37,8 +34,11 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SpeedController"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Victor"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.OI"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Robot"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.RobotMap.Motors"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.Command"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DriverStation"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.Command"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Encoder"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.RobotMap.AnalogInputs"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Robot"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 </qualifiedTypeNameHistroy>

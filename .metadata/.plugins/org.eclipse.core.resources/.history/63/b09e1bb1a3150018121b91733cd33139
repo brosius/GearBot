@@ -1,0 +1,36 @@
+package org.usfirst.frc.team6317.robot.commands;
+
+import org.usfirst.frc.team6317.robot.Robot;
+
+import edu.wpi.first.wpilibj.Encoder;
+import edu.wpi.first.wpilibj.command.Command;
+
+public class DriveFor extends Command{
+	
+	Encoder leftEncoder, rightEncoder;
+	private final double speed, inches, neededLeftPosition, neededRightPosition;
+	
+	public DriveFor(double inches, double speed) {
+		this.requires(Robot.DriveSubsystem);
+		this.requires(Robot.SensorSubsystem);
+		this.speed = speed;
+		this.inches = inches;
+		double leftPos = Robot.SensorSubsystem.getEncoderPosition(Robot.SensorSubsystem.leftEncoder);
+		double rightPos = Robot.SensorSubsystem.getEncoderPosition(Robot.SensorSubsystem.rightEncoder);
+		neededLeftPosition = leftPos + Robot.SensorSubsystem.getNeededEncoders(this.inches);
+		neededRightPosition = rightPos + Robot.SensorSubsystem.getNeededEncoders(this.inches);
+	}
+	
+	@Override
+	protected void initialize() {
+		if (!isFinished()) Robot.DriveSubsystem.drive(this.speed);
+	}
+
+	@Override
+	protected boolean isFinished() {
+		// TODO Auto-generated method stub
+		double leftPos = Robot.SensorSubsystem.getEncoderPosition(Robot.SensorSubsystem.leftEncoder);
+		return leftPos > this.neededLeftPosition;
+	}
+
+}
