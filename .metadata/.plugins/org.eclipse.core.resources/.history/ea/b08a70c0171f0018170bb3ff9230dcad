@@ -1,0 +1,32 @@
+package org.usfirst.frc.team6317.robot.commands;
+
+import org.usfirst.frc.team6317.robot.Robot;
+
+import edu.wpi.first.wpilibj.command.Command;
+
+public class Grabber extends Command {
+
+	public Grabber() {
+		this.requires(Robot.Shifter);
+	}
+	
+	@Override
+	protected void initialize() {
+		if(state == 0)
+			Robot.Shifter.openArm();		
+		if(state == 1)
+			Robot.Shifter.closeArm();
+		if (state == 3)
+			Robot.Shifter.firePiston();
+		if (state == 4)
+			Robot.Shifter.lowerPiston();
+		if (state == 5 && Robot.SensorSubsystem.getDistanceCenti() < 30)
+			Robot.Shifter.firePiston();
+	
+	
+	@Override
+	protected boolean isFinished() {
+		return true;
+	}
+
+}

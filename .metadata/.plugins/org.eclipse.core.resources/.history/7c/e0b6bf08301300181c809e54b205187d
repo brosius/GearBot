@@ -1,7 +1,0 @@
-package org.usfirst.frc.team6317.robot.subsystems;
-
-import edu.wpi.first.wpilibj.command.Command;
-
-public class FieldOrientation extends SubSystem{
-
-}
