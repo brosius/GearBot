@@ -46,12 +46,14 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 		
 		//CameraServer.getInstance().startAutomaticCapture();
+		SensorSubsystem.initEncoders();
 		
 		autoChooser = new SendableChooser();
-		autoChooser.addDefault("Middle Auto", new TestAuto());
-		autoChooser.addObject("Closest Switch", new MiddleAutonomous());
+		autoChooser.addDefault("Middle Start", new MiddleAutonomous());
+		autoChooser.addObject("Closest Switch", new TestAuto());
 		autoChooser.addObject("Middle Scale", new DriveUntil(30));
-		autoChooser.addObject("Encoder Testing 1.2", new TestAuto());
+		autoChooser.addObject("Encoder Testing 1.2", new MiddleAutonomous());
+		autoChooser.addObject("Right Autonomous", new RightAuto());
 		SmartDashboard.putData("Auto mode", autoChooser);
 	}
 
@@ -117,8 +119,6 @@ public class Robot extends IterativeRobot {
 		Shifter.openArm();
 		if (autonomousCommand != null)
 			autonomousCommand.cancel();
-		gameData = DriverStation.getInstance().getGameSpecificMessage();
-		SmartDashboard.putString("Game Data", Robot.gameData);
 	}
 
 	/**
@@ -127,8 +127,6 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
-		Robot.SensorSubsystem.getRightDistanceMilli();
-		Robot.SensorSubsystem.getLeftDistanceMilli();
 	}
 
 	/**

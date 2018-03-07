@@ -1,0 +1,19 @@
+package org.usfirst.frc.team6317.robot.commands;
+
+import org.usfirst.frc.team6317.robot.Robot;
+
+import edu.wpi.first.wpilibj.command.CommandGroup;
+
+public class TestAuto extends CommandGroup {
+	public TestAuto() {
+		addSequential(new SolenoidShift(1));
+		addSequential(new DriveFor(50, 0.4, 0.6));//last numbe ris right speed modifier
+		addSequential(new DriveFor(12, 0.4, 0.55));
+//		addSequential(new TurnFor("L", 24));
+//		addSequential(new DriveFor(36, 0.2, 0.87));
+		addSequential(new TurnFor("R", 36));
+		addSequential(new DriveFor(35, 0.2, 0.87));
+		addSequential(new SolenoidShift(0));
+		//addSequential(new DriveUntil(30, 0.2));
+	}
+}

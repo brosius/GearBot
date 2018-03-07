@@ -30,16 +30,36 @@ public class DriveSubsystem extends Subsystem {
 		rightDriveTwo.set(rightSpeed);
 	}
 	
+//	public void backDrive(double leftSpeed, double rightSpeed, double rightModifier) {
+//		leftDriveOne.set(leftSpeed);
+//		leftDriveTwo.set(leftSpeed);
+//		rightDriveOne.set(rightSpeed * rightModifier);
+//		rightDriveTwo.set(rightSpeed * rightModifier);
+//	}
+	
 	public void backDrive(double leftSpeed, double rightSpeed) {
 		leftDriveOne.set(leftSpeed);
 		leftDriveTwo.set(leftSpeed);
-		rightDriveOne.set(rightSpeed * (2.13 * rightSpeed));
-		rightDriveTwo.set(rightSpeed * (2.13 * rightSpeed));//.2 speed 
+		rightDriveOne.set(rightSpeed);
+		rightDriveTwo.set(rightSpeed);
 	}
 	
-	public void backDrive(double speed) {
-		backDrive(speed, speed);
+	public void leftAutoDrive(double leftSpeed, double rightSpeed) {
+		leftDriveOne.set(leftSpeed);
+		leftDriveTwo.set(leftSpeed);
+		rightDriveOne.set(rightSpeed * 0.7);
+		rightDriveTwo.set(rightSpeed* 0.7);
 	}
+	public void leftAutoStraighten(double leftSpeed, double rightSpeed) {
+		leftDriveOne.set(leftSpeed * .9);
+		leftDriveTwo.set(leftSpeed * .9);
+		rightDriveOne.set(rightSpeed * 0.87);
+		rightDriveTwo.set(rightSpeed* 0.87);
+	}
+	
+//	public void backDrive(double speed, double leftModifier) {
+//		backDrive(speed, speed, leftModifier);
+//	}
 	
 	public void drive(double speed) {
 		drive(speed, speed);

@@ -22,7 +22,7 @@ public class SolenoidShift extends Command {
 			Robot.Shifter.firePiston();
 		if (state == 4)
 			Robot.Shifter.lowerPiston();
-		if (state == 5 && Robot.SensorSubsystem.getDistanceCenti() < 30)
+		if (state == 5)
 			Robot.Shifter.firePiston();
 	}
 

@@ -1,0 +1,15 @@
+package org.usfirst.frc.team6317.robot.commands;
+
+import edu.wpi.first.wpilibj.command.Command;
+
+public class MiddleAutonomous extends Command {
+	
+	@Override
+	protected void initialize() {
+	}
+
+	@Override
+	protected boolean isFinished() {
+		return true;
+	}
+}

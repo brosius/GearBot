@@ -8,30 +8,36 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class DriveFor extends Command{
 	
-	private final double speed, inches;
+	private final double speed, inches, rightModifier, leftModifier;
 	
 	public DriveFor(double inches) {
-		this(inches, 0.5);
+		this(inches, 0.5, 1, 1);
 	}
 	
 	public DriveFor(double inches, double speed) {
+		this(inches, speed, 1, 1);
+	}
+	
+	public DriveFor(double inches, double speed, double rightModifier) {
+		this(inches, speed, 1, rightModifier);
+	}
+	
+	public DriveFor(double inches, double speed, double leftModifier, double rightModifier) {
 		this.requires(Robot.DriveSubsystem);
 		this.requires(Robot.SensorSubsystem);
 		this.speed = speed;
 		this.inches = inches;
+		this.rightModifier = rightModifier;
+		this.leftModifier = leftModifier;
 	}
 	
 	@Override
 	protected void initialize() {
-		Robot.SensorSubsystem.initEncoders();
 		Robot.SensorSubsystem.resetEncoders();
-		if (!isFinished()) Robot.DriveSubsystem.backDrive(this.speed);
+		if (!isFinished()) 
+			Robot.DriveSubsystem.backDrive(this.speed * this.leftModifier, this.speed * this.rightModifier);
 	}
 	
-	@Override
-	protected void execute() {
-		
-	}
 
 	@Override
 	protected boolean isFinished() {

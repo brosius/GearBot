@@ -21,8 +21,8 @@ public class OI {
 	Button topRight = new JoystickButton(controlStick, 6);
 	
 	public OI() {
-		//topRight.whenPressed(new SolenoidShift(0));
-		//botRight.whenPressed(new SolenoidShift(1));
+		topRight.whenPressed(new SolenoidShift(0));
+		botRight.whenPressed(new SolenoidShift(1));
 		topLeft.whenPressed(new SolenoidShift(3));
 		botLeft.whenPressed(new SolenoidShift(4));
 		controlTrigger.whenPressed(new Grabber());

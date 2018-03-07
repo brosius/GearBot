@@ -39,6 +39,6 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.Command"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Encoder"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.RobotMap.AnalogInputs"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Robot"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Robot"/>
 </qualifiedTypeNameHistroy>

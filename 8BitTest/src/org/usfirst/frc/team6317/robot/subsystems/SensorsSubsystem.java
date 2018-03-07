@@ -13,7 +13,7 @@ public class SensorsSubsystem extends Subsystem {
 	public AnalogInput frontDistanceSensor = new AnalogInput(RobotMap.AnalogInputs.FRONT_DISTANCE_SENSOR);
 	public AnalogInput rightDistanceSensor = new AnalogInput(RobotMap.AnalogInputs.RIGHT_DISTANCE_SENSOR);
 	public AnalogInput leftDistanceSensor = new AnalogInput(RobotMap.AnalogInputs.LEFT_DISTANCE_SENSOR);
-	public Encoder leftEncoder = new Encoder(2, 3, false, EncodingType.k4X);
+	public Encoder leftEncoder = new Encoder(4, 5, false, EncodingType.k4X);
 	public Encoder rightEncoder = new Encoder(0, 1, true, EncodingType.k4X);
 	
 	// Encoder Values

@@ -4,25 +4,49 @@ import org.usfirst.frc.team6317.robot.Robot;
 
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class TurnFor extends Command {
 	private final String direction;
 	private final int inches;
 
+	public TurnFor(char closestData) {
+		if (Robot.gameData.length() > 0) {
+			if (closestData == 'L') {
+				this.direction = "R";
+				this.inches = 30;
+			} else if (closestData == 'R') {
+				this.direction = "L";
+				this.inches = 30;
+			}
+		}
+		 else {
+				this.direction = "R";
+				this.inches = 0;
+		 }
+	}
+	
 	public TurnFor(String turnDirection , int turning) {
 		this.direction = turnDirection;
 		this.inches = turning;
 	}
-	
+		
 	@Override
 	protected void initialize() {
+		Robot.SensorSubsystem.resetEncoders();
 		if (!isFinished() && this.direction.equalsIgnoreCase("R")) {
 			Robot.DriveSubsystem.drive(0, 0.2);
 		} else if (!isFinished() && this.direction.equalsIgnoreCase("L")) {
 			Robot.DriveSubsystem.drive(0.2, 0);
 		}
 	}
-
+	
+	@Override
+	protected void execute() {
+		SmartDashboard.putNumber("Left Turning Encoder", Robot.SensorSubsystem.leftEncoder.getDistance());
+		SmartDashboard.putNumber("Right Turning Encoder", Robot.SensorSubsystem.rightEncoder.getDistance());
+	}
+	
 	@Override
 	protected boolean isFinished() {
 		Encoder leftEnc = Robot.SensorSubsystem.leftEncoder;

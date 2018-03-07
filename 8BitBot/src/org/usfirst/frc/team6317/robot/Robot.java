@@ -47,7 +47,7 @@ public class Robot extends IterativeRobot {
 		
 		autoChooser = new SendableChooser();
 		autoChooser.addDefault("Middle Auto", new TestAuto());
-		autoChooser.addObject("Closest Switch", new MiddleAutonomous());
+		autoChooser.addObject("Middle Start", new MiddleAutonomous());
 		autoChooser.addObject("Middle Scale", new DriveUntil(30));
 		autoChooser.addObject("Encoder Testing 1.2", new TestAuto());
 		SmartDashboard.putData("Auto mode", autoChooser);
