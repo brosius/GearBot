@@ -29,6 +29,8 @@ public class Robot extends IterativeRobot {
 	public static final LiftSubsystem LiftSubsystem = new LiftSubsystem();
 	public static OI oi;
 	
+	public static String gameData  = "RRR";
+	
 	public static boolean isOpen;
 	
 	@SuppressWarnings("rawtypes")
@@ -50,10 +52,7 @@ public class Robot extends IterativeRobot {
 		
 		autoChooser = new SendableChooser();
 		autoChooser.addDefault("Middle Start", new MiddleAutonomous());
-		autoChooser.addObject("Closest Switch", new TestAuto());
-		autoChooser.addObject("Middle Scale", new DriveUntil(30));
-		autoChooser.addObject("Encoder Testing 1.2", new MiddleAutonomous());
-		autoChooser.addObject("Right Autonomous", new RightAuto());
+		autoChooser.addObject("Right Start", new RightAuto());
 		SmartDashboard.putData("Auto mode", autoChooser);
 	}
 
@@ -83,10 +82,11 @@ public class Robot extends IterativeRobot {
 	 * chooser code above (like the commented example) or additional comparisons
 	 * to the switch structure below with additional strings & commands.
 	 */
-	public static String gameData = "";
 	@Override
 	public void autonomousInit() {
+		
 		gameData = DriverStation.getInstance().getGameSpecificMessage();
+		
 		autonomousCommand = (Command) autoChooser.getSelected();
 		autonomousCommand.start();
 		/*
@@ -106,6 +106,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousPeriodic() {
+		SmartDashboard.putString("Game Data", gameData);
 		Scheduler.getInstance().run();
 	}
 

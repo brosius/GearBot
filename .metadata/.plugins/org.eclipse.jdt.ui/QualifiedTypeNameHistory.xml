@@ -41,4 +41,7 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.RobotMap.AnalogInputs"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Robot"/>
+<fullyQualifiedTypeName name="java.util.Objects"/>
+<fullyQualifiedTypeName name="java.util.function.Supplier"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Direction"/>
 </qualifiedTypeNameHistroy>

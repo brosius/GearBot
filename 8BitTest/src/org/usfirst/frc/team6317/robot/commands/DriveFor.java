@@ -23,6 +23,7 @@ public class DriveFor extends Command{
 	}
 	
 	public DriveFor(double inches, double speed, double leftModifier, double rightModifier) {
+		//0.87 modifier is almsot straight
 		this.requires(Robot.DriveSubsystem);
 		this.requires(Robot.SensorSubsystem);
 		this.speed = speed;
