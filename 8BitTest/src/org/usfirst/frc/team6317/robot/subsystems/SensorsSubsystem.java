@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class SensorsSubsystem extends Subsystem {
+	//initializes everything
 	public AnalogInput frontDistanceSensor = new AnalogInput(RobotMap.AnalogInputs.FRONT_DISTANCE_SENSOR);
 	public AnalogInput rightDistanceSensor = new AnalogInput(RobotMap.AnalogInputs.RIGHT_DISTANCE_SENSOR);
 	public AnalogInput leftDistanceSensor = new AnalogInput(RobotMap.AnalogInputs.LEFT_DISTANCE_SENSOR);
@@ -49,6 +50,7 @@ public class SensorsSubsystem extends Subsystem {
 		});
 	}
 	
+	//sensor for the front
 	public double getDistanceCenti() {
 		double volts = frontDistanceSensor.getVoltage();
 		double millivolts = volts * 1000;
@@ -57,6 +59,7 @@ public class SensorsSubsystem extends Subsystem {
 		return centimeters;
 	}
 	
+	//left sensor
 	public double getLeftDistanceMilli() {
 		double volts = leftDistanceSensor.getVoltage();
 		double millivolts = volts * 1000;
@@ -65,6 +68,7 @@ public class SensorsSubsystem extends Subsystem {
 		return millimeters;
 	}
 	
+	//right happiness
 	public double getRightDistanceMilli() {
 		double volts = rightDistanceSensor.getVoltage();
 		double millivolts = volts * 1000;
@@ -73,15 +77,18 @@ public class SensorsSubsystem extends Subsystem {
 		return millimeters;
 	}
 	
+	//initializes encoders
 	public void initEncoders() {
 		leftEncoder.setDistancePerPulse(DISTANCE_PER_PULSE);
 		rightEncoder.setDistancePerPulse(DISTANCE_PER_PULSE);
 	}
 	
+	//checks encoders for distance
 	public boolean encoderDistanceDone(Encoder encoderToCheck, double inches) {
 		return encoderToCheck.getDistance() > inches;
 	}
 	
+	//resets encoder values to 0
 	public void resetEncoders() {
 		leftEncoder.reset();
 		rightEncoder.reset();

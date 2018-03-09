@@ -16,7 +16,7 @@ public class TurnFor extends Command {
 	private Supplier<Direction> directionSupplier;
 
 	public TurnFor(char closestData) {
-		this.direction = Direction.fromChar(closestData).opposite();
+		this.direction = Direction.fromChar(closestData);
 		Objects.requireNonNull(this.direction);
 		this.inches = 24;
 		if (closestData == 'L') {
@@ -60,12 +60,6 @@ public class TurnFor extends Command {
 				Robot.DriveSubsystem.drive(0.4, 0);
 			}
 		}
-	}
-	
-	@Override
-	protected void execute() {
-		SmartDashboard.putNumber("Left Turning Encoder", Robot.SensorSubsystem.leftEncoder.getDistance());
-		SmartDashboard.putNumber("Right Turning Encoder", Robot.SensorSubsystem.rightEncoder.getDistance());
 	}
 	
 	@Override

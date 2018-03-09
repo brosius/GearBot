@@ -22,6 +22,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * directory.
  */
 public class Robot extends IterativeRobot {
+	//Initializes all subsystems
 	public static final DriveSubsystem DriveSubsystem = new DriveSubsystem();
 	public static final Shifter Shifter = new Shifter();
 	public static final Subsystem IntakeSystem = null;
@@ -29,11 +30,12 @@ public class Robot extends IterativeRobot {
 	public static final LiftSubsystem LiftSubsystem = new LiftSubsystem();
 	public static OI oi;
 	
+	//gamedata
 	public static String gameData  = "RRR";
 	
 	public static boolean isOpen;
 	
-	@SuppressWarnings("rawtypes")
+	@SuppressWarnings("rawtypes") //auto chooser
 	SendableChooser autoChooser;
 	Command autonomousCommand;
 	
@@ -45,11 +47,14 @@ public class Robot extends IterativeRobot {
 	@SuppressWarnings({ "rawtypes", "unchecked"})
 	@Override
 	public void robotInit() {
+		//starts OI
 		oi = new OI();
 		
 		//CameraServer.getInstance().startAutomaticCapture();
+		//starts encoders
 		SensorSubsystem.initEncoders();
 		
+		//makes the sendable chooser
 		autoChooser = new SendableChooser();
 		autoChooser.addDefault("Middle Start", new MiddleAutonomous());
 		autoChooser.addObject("Right Start", new RightAuto());
@@ -84,9 +89,9 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousInit() {
-		
+		//grabs gamedatas from the field
 		gameData = DriverStation.getInstance().getGameSpecificMessage();
-		
+		//starts the auto selected from auto chooser
 		autonomousCommand = (Command) autoChooser.getSelected();
 		autonomousCommand.start();
 		/*
@@ -106,6 +111,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousPeriodic() {
+		//writes gamedata to smartdashboard
 		SmartDashboard.putString("Game Data", gameData);
 		Scheduler.getInstance().run();
 	}
@@ -116,6 +122,7 @@ public class Robot extends IterativeRobot {
 		// teleop starts running. If you want the autonomous to
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
+		//opens arm at begging of teleop
 		isOpen = true;
 		Shifter.openArm();
 		if (autonomousCommand != null)

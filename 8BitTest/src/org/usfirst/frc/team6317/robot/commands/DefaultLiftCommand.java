@@ -13,6 +13,7 @@ public class DefaultLiftCommand extends Command {
 	
 	@Override
 	protected void execute() {
+		//sets pivot, and life speeds
 		Robot.LiftSubsystem.setLift(OI.controlStick.getThrottle());
 		Robot.LiftSubsystem.setPivot(OI.controlStick.getY());
 	}

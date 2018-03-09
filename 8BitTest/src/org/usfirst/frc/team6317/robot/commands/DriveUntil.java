@@ -26,16 +26,19 @@ public class DriveUntil extends Command {
 
 	@Override
 	protected void initialize() {
+		//drives until is finished() returns true
 		if (!isFinished()) Robot.DriveSubsystem.backDrive(this.speed, 0.87);
 	}
 
 	@Override
 	protected boolean isFinished() {
+		//drives untl the sensor distance is less than specified
 		return Robot.SensorSubsystem.getDistanceCenti() <= centimetersToTravelTo;
 	}
 
 	@Override
 	protected void end() {
+		//at the end it stops the robot
 		Robot.DriveSubsystem.stop();
 	}
 }

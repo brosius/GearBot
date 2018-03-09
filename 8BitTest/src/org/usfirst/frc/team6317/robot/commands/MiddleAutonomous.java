@@ -9,16 +9,19 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 
 public class MiddleAutonomous extends CommandGroup {
 	public MiddleAutonomous() {
+			//lowers piston
 			addSequential(new SolenoidShift(1));
-			addSequential(new DriveFor(50, 0.4, 0.87));//last number is right speed modifier
-			addSequential(new DriveFor(17, 0.4, 0.87));
-			if (Robot.gameData.length() > 0) {
-				addSequential(new TurnFor(() -> Direction.fromChar(Robot.gameData.charAt(0)).opposite(), 24));
-				addSequential(new TurnFor(() -> Direction.fromChar(Robot.gameData.charAt(0)).opposite(), 24));
-			}
-			addSequential(new DriveFor(35, 0.2, 0.87));
+			//drives for 50 inches
+			addSequential(new DriveFor(5, 0.5, 0.8));//last number is right speed modifier
+			//drives for ___ inches at a lower speed to turn more left
+//			addSequential(new DriveFor(15, 0.5, 0.57));
+			//determines how to turn in auto depending on how the gamedata is
+			addSequential(new TurnFor(() -> Direction.fromChar(Robot.gameData.charAt(0)), 65));
+			addSequential(new DriveFor(10, 0.5, 0.87));
+			addSequential(new TurnFor(() -> Direction.fromChar(Robot.gameData.charAt(0)).opposite(), 70));
+			//drives forward until sensor returns
+			addSequential(new DriveFor(20, 0.2, 0.87));
+			//pops piston
 			addSequential(new SolenoidShift(0));
-			
-			//addSequential(new DriveUntil(30, 0.2));
-	}
+			}
 }

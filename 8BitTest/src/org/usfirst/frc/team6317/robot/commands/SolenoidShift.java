@@ -14,6 +14,7 @@ public class SolenoidShift extends Command {
 	
 	@Override
 	protected void initialize() {
+		//depending on input, pops or lowers piston and closes / opens clamps
 		if(state == 0)
 			Robot.Shifter.openArm();		
 		if(state == 1)

@@ -13,6 +13,7 @@ public class DefaultDriveCommand extends Command {
 	
 	@Override
 	protected void execute() {
+		//sets robot to drive depending on how far forward the joy sticks are pushed
 		Robot.DriveSubsystem.drive(OI.leftStick.getY(), OI.rightStick.getY());
 	}
 

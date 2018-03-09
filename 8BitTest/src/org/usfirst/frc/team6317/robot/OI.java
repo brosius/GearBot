@@ -13,7 +13,7 @@ public class OI {
 	
 	public static Joystick leftStick = new Joystick(0);
 	public static Joystick rightStick = new Joystick(1);
-	public static Joystick controlStick = new Joystick(2); // mine
+	public static Joystick controlStick = new Joystick(2);
 	Button controlTrigger = new JoystickButton(controlStick, 1);
 	Button botRight = new JoystickButton(controlStick, 4);
 	Button botLeft = new JoystickButton(controlStick, 3);
