@@ -43,5 +43,8 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Robot"/>
 <fullyQualifiedTypeName name="java.util.Objects"/>
 <fullyQualifiedTypeName name="java.util.function.Supplier"/>
+<fullyQualifiedTypeName name="java.util.function.DoubleFunction"/>
+<fullyQualifiedTypeName name="java.util.function.IntFunction"/>
+<fullyQualifiedTypeName name="java.util.function.Function"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Direction"/>
 </qualifiedTypeNameHistroy>

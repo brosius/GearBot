@@ -26,7 +26,7 @@ public class DriveUntil extends Command {
 
 	@Override
 	protected void initialize() {
-		if (!isFinished()) Robot.DriveSubsystem.backDrive(this.speed);
+		if (!isFinished()) Robot.DriveSubsystem.backDrive(this.speed * 0.9, this.speed);
 	}
 
 	@Override

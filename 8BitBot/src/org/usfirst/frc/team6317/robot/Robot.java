@@ -29,6 +29,11 @@ public class Robot extends IterativeRobot {
 	public static final LiftSubsystem LiftSubsystem = new LiftSubsystem();
 	public static OI oi;
 	
+	//gamedata
+	public static String gameData  = "RRR";
+	
+	public static boolean isOpen;
+	
 	@SuppressWarnings("rawtypes")
 	SendableChooser autoChooser;
 	Command autonomousCommand;
@@ -44,12 +49,13 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 		
 		CameraServer.getInstance().startAutomaticCapture();
+		//starts encoders
+		SensorSubsystem.initEncoders();
 		
+		//makes the sendable chooser
 		autoChooser = new SendableChooser();
-		autoChooser.addDefault("Middle Auto", new TestAuto());
-		autoChooser.addObject("Middle Start", new MiddleAutonomous());
-		autoChooser.addObject("Middle Scale", new DriveUntil(30));
-		autoChooser.addObject("Encoder Testing 1.2", new TestAuto());
+		autoChooser.addDefault("Middle Start", new MiddleAutonomous());
+		autoChooser.addObject("Right Start", new RightAuto());
 		SmartDashboard.putData("Auto mode", autoChooser);
 	}
 
@@ -79,10 +85,11 @@ public class Robot extends IterativeRobot {
 	 * chooser code above (like the commented example) or additional comparisons
 	 * to the switch structure below with additional strings & commands.
 	 */
-	public static String gameData = "";
 	@Override
 	public void autonomousInit() {
+		//grabs gamedatas from the field
 		gameData = DriverStation.getInstance().getGameSpecificMessage();
+		//starts the auto selected from auto chooser
 		autonomousCommand = (Command) autoChooser.getSelected();
 		autonomousCommand.start();
 		/*
@@ -123,6 +130,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
+		Robot.SensorSubsystem.getDistanceCenti();
 		Robot.SensorSubsystem.getRightDistanceMilli();
 		Robot.SensorSubsystem.getLeftDistanceMilli();
 	}
