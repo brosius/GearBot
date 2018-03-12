@@ -37,14 +37,15 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.RobotMap.Motors"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DriverStation"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.Command"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Encoder"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.RobotMap.AnalogInputs"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Robot"/>
 <fullyQualifiedTypeName name="java.util.Objects"/>
 <fullyQualifiedTypeName name="java.util.function.Supplier"/>
 <fullyQualifiedTypeName name="java.util.function.DoubleFunction"/>
 <fullyQualifiedTypeName name="java.util.function.IntFunction"/>
 <fullyQualifiedTypeName name="java.util.function.Function"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Direction"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Encoder"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Robot"/>
 </qualifiedTypeNameHistroy>

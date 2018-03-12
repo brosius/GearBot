@@ -56,6 +56,9 @@ public class Robot extends IterativeRobot {
 		autoChooser = new SendableChooser();
 		autoChooser.addDefault("Middle Start", new MiddleAutonomous());
 		autoChooser.addObject("Right Start", new RightAuto());
+		autoChooser.addObject("Left Start", new LeftAuto());
+		autoChooser.addObject("Left Scale", new LeftAutoScale());
+		autoChooser.addObject("Drift", new DriftFixing());
 		SmartDashboard.putData("Auto mode", autoChooser);
 	}
 
@@ -138,6 +141,7 @@ public class Robot extends IterativeRobot {
 	/**
 	 * This function is called periodically during test mode
 	 */
+	@SuppressWarnings("deprecation")
 	@Override
 	public void testPeriodic() {
 		LiveWindow.run();

@@ -10,10 +10,12 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class SensorsSubsystem extends Subsystem {
-	//initializes everything
+	// Distance Sensors
 	public AnalogInput frontDistanceSensor = new AnalogInput(RobotMap.AnalogInputs.FRONT_DISTANCE_SENSOR);
 	public AnalogInput rightDistanceSensor = new AnalogInput(RobotMap.AnalogInputs.RIGHT_DISTANCE_SENSOR);
 	public AnalogInput leftDistanceSensor = new AnalogInput(RobotMap.AnalogInputs.LEFT_DISTANCE_SENSOR);
+	
+	// Encoders
 	public Encoder leftEncoder = new Encoder(3, 4, false, EncodingType.k4X);
 	public Encoder rightEncoder = new Encoder(0, 1, true, EncodingType.k4X);
 	
@@ -50,7 +52,10 @@ public class SensorsSubsystem extends Subsystem {
 		});
 	}
 	
-	//sensor for the front
+	/**
+	 * Grabs the value in centimeters for the front distance sensor
+	 * @return The centimeter value of the front distance sensor
+	 */
 	public double getDistanceCenti() {
 		double volts = frontDistanceSensor.getVoltage();
 		double millivolts = volts * 1000;
@@ -59,7 +64,10 @@ public class SensorsSubsystem extends Subsystem {
 		return centimeters;
 	}
 	
-	//left sensor
+	/**
+	 * Grabs the value in millimeters for the left distance sensor
+	 * @return The millimeter value of the left distance sensor
+	 */
 	public double getLeftDistanceMilli() {
 		double volts = leftDistanceSensor.getVoltage();
 		double millivolts = volts * 1000;
@@ -68,7 +76,10 @@ public class SensorsSubsystem extends Subsystem {
 		return millimeters;
 	}
 	
-	//right happiness
+	/**
+	 * Grabs the value in millimeters for the right distance sensor
+	 * @return The millimeter value of the right distance sensor
+	 */
 	public double getRightDistanceMilli() {
 		double volts = rightDistanceSensor.getVoltage();
 		double millivolts = volts * 1000;
@@ -76,19 +87,32 @@ public class SensorsSubsystem extends Subsystem {
 		SmartDashboard.putNumber("Right MilliMeters", millimeters);
 		return millimeters;
 	}
-	
-	//initializes encoders
+
+	/**
+	 * Initializes the left and right encoders
+	 */
 	public void initEncoders() {
 		leftEncoder.setDistancePerPulse(DISTANCE_PER_PULSE);
 		rightEncoder.setDistancePerPulse(DISTANCE_PER_PULSE);
 	}
 	
-	//checks encoders for distance
+	/**
+	 * Checks the encoder distance traveled
+	 * @param encoderToCheck Which encoder we are monitoring
+	 * @param inches The distance needing to travel
+	 * @return The value of whether the distance has been traveled or not
+	 */
 	public boolean encoderDistanceDone(Encoder encoderToCheck, double inches) {
-		return encoderToCheck.getDistance() > inches;
+		if (inches < 0) {
+			return encoderToCheck.getDistance() < inches;
+		} else {
+			return encoderToCheck.getDistance() > inches;
+		}
 	}
 	
-	//resets encoder values to 0
+	/**
+	 * Resets both encoder values to zero
+	 */
 	public void resetEncoders() {
 		leftEncoder.reset();
 		rightEncoder.reset();

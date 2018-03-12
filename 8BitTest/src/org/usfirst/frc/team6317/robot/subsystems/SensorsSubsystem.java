@@ -3,6 +3,7 @@ package org.usfirst.frc.team6317.robot.subsystems;
 import org.usfirst.frc.team6317.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.AnalogInput;
+import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.CounterBase.EncodingType;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.command.Command;
@@ -16,6 +17,7 @@ public class SensorsSubsystem extends Subsystem {
 	public AnalogInput leftDistanceSensor = new AnalogInput(RobotMap.AnalogInputs.LEFT_DISTANCE_SENSOR);
 	public Encoder leftEncoder = new Encoder(8, 9, false, EncodingType.k4X);
 	public Encoder rightEncoder = new Encoder(0, 1, true, EncodingType.k4X);
+	public Compressor compressor = new Compressor();
 	
 	// Encoder Values
 	private static final int WHEEL_DIAMETER = 6;

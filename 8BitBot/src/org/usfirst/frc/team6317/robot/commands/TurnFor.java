@@ -67,10 +67,18 @@ public class TurnFor extends Command {
 			this.inches = this.inchesFunction.apply(this.direction);
 		
 		if (!this.isFinished()) {
-			if (this.direction == Direction.RIGHT) {
-				Robot.DriveSubsystem.drive(0, 0.4);
-			} else if (this.direction == Direction.LEFT) {
-				Robot.DriveSubsystem.drive(0.4, 0);
+			if (this.inches > 0) {
+				if (this.direction == Direction.RIGHT) {
+					Robot.DriveSubsystem.drive(0, 0.4);
+				} else if (this.direction == Direction.LEFT) {
+					Robot.DriveSubsystem.drive(0.4, 0);
+				}
+			} else {
+				if (this.direction == Direction.RIGHT) {
+					Robot.DriveSubsystem.drive(0, -0.4);
+				} else if (this.direction == Direction.LEFT) {
+					Robot.DriveSubsystem.drive(-0.4, 0);
+				}
 			}
 		}
 	}

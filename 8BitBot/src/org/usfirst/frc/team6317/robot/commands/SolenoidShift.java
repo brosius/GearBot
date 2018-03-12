@@ -13,17 +13,26 @@ public class SolenoidShift extends Command {
 	public Supplier<Direction> directionSupplier;
 	public Direction direction;
 	
+	/**
+	 * Initializes the command for pneumatic movement
+	 * @param stateIn Holds data for what pneumatic movement we want
+	 */
 	public SolenoidShift(int stateIn) {
 		this.requires(Robot.Shifter);
 		state = stateIn;
 	}
 	
-	public SolenoidShift(Supplier<Direction> direction) {
+	/**
+	 * Initializes program to be able to decide whether to throw the cube or not
+	 * @param direction The game data value of which side our switch is on
+	 * @param stateIn Holds data for what pneumatic movement we want
+	 */
+	public SolenoidShift(Supplier<Direction> direction , int stateIn) {
 		this.requires(Robot.Shifter);
-		this.state = 5;
 		this.directionSupplier = direction;
+		this.state = stateIn;
 	}
-	
+
 	@Override
 	protected void initialize() {
 		if (this.directionSupplier != null)

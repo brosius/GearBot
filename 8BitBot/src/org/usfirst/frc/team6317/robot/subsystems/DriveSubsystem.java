@@ -8,14 +8,15 @@ import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class DriveSubsystem extends Subsystem {
-	//initalze speed controllers for motors
+	// Initializes speed controllers for the motors
 	public SpeedController leftDriveOne = new Victor(RobotMap.Motors.LEFT_DRIVE_ONE);
 	public SpeedController leftDriveTwo = new Victor(RobotMap.Motors.LEFT_DRIVE_TWO);
 	public SpeedController rightDriveOne = new Victor(RobotMap.Motors.RIGHT_DRIVE_ONE);
 	public SpeedController rightDriveTwo = new Victor(RobotMap.Motors.RIGHT_DRIVE_TWO);
 	
 	{
-		//inverts left side
+		// Inverts the left motors
+		// Allows for all motors to drive in the same direction
 		leftDriveOne.setInverted(true);
 		leftDriveTwo.setInverted(true);
 	}
@@ -24,10 +25,23 @@ public class DriveSubsystem extends Subsystem {
 	protected void initDefaultCommand() {
 		setDefaultCommand(new DefaultDriveCommand());
 	}
-	//forward auto command with modifier
+	
+	/**
+	 * Allows for driving forward during TeleOp
+	 * @param speed The speed applied to both the left and the right motors
+	 */
+	public void drive(double speed) {
+		drive(speed, speed);
+	}
+	
+	/**
+	 * Allows for normal driving during TeleOp
+	 * @param leftSpeed The power applied to the left motors
+	 * @param rightSpeed The power applied to the right motors
+	 */
 	public void drive(double leftSpeed, double rightSpeed) {
-		leftDriveOne.set(leftSpeed * 0.84);
-		leftDriveTwo.set(leftSpeed * 0.84);
+		leftDriveOne.set(leftSpeed * 0.825);
+		leftDriveTwo.set(leftSpeed * 0.825);
 		rightDriveOne.set(rightSpeed);
 		rightDriveTwo.set(rightSpeed);
 	}
@@ -39,7 +53,11 @@ public class DriveSubsystem extends Subsystem {
 //		rightDriveTwo.set(rightSpeed * rightModifier);
 //	}
 	
-	//base command
+	/**
+	 * Allows for driving backwards during autonomous
+	 * @param leftSpeed The power applied to the left motors
+	 * @param rightSpeed The power applied to the right motors
+	 */
 	public void backDrive(double leftSpeed, double rightSpeed) {
 		leftDriveOne.set(leftSpeed);
 		leftDriveTwo.set(leftSpeed);
@@ -47,11 +65,9 @@ public class DriveSubsystem extends Subsystem {
 		rightDriveTwo.set(rightSpeed);
 	}
 	
-	//drive command
-	public void drive(double speed) {
-		drive(speed, speed);
-	}
-	
+	/**
+	 * Stops the robot
+	 */
 	public void stop() {
 		drive(0);
 	}
