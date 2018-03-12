@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.CounterBase.EncodingType"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.livewindow.LiveWindow"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.ShootingAuto"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.CommandGroup"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.GyroTest"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.AutoBallBinAndShoot"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.AllianceColor"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.commands.CompressorCommand"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Compressor"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DoubleSolenoid"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.subsystems.Shifter"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Ultrasonic"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.buttons.JoystickButton"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick.ButtonType"/>
@@ -48,4 +36,28 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team6317.robot.Robot"/>
+<fullyQualifiedTypeName name="javafx.fxml.FXMLLoader"/>
+<fullyQualifiedTypeName name="javafx.scene.Parent"/>
+<fullyQualifiedTypeName name="javafx.scene.Scene"/>
+<fullyQualifiedTypeName name="com.phidgets.event.DetachListener"/>
+<fullyQualifiedTypeName name="com.phidgets.Manager"/>
+<fullyQualifiedTypeName name="javafx.util.Callback"/>
+<fullyQualifiedTypeName name="javafx.scene.control.ListView"/>
+<fullyQualifiedTypeName name="frc6317.phidgettest.factories.PhidgetListCellFactory"/>
+<fullyQualifiedTypeName name="javafx.scene.control.ListCell"/>
+<fullyQualifiedTypeName name="java.awt.Label"/>
+<fullyQualifiedTypeName name="javafx.scene.control.Label"/>
+<fullyQualifiedTypeName name="javafx.scene.control.ComboBox"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.stream.IntStream"/>
+<fullyQualifiedTypeName name="com.phidgets.Phidget"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.phidgets.SpatialEventData"/>
+<fullyQualifiedTypeName name="javafx.fxml.FXML"/>
+<fullyQualifiedTypeName name="javafx.application.Platform"/>
+<fullyQualifiedTypeName name="com.phidgets.event.AttachListener"/>
+<fullyQualifiedTypeName name="com.phidgets.event.SpatialDataListener"/>
+<fullyQualifiedTypeName name="com.phidgets.SpatialPhidget"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Compressor"/>
 </qualifiedTypeNameHistroy>

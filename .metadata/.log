@@ -22703,3 +22703,6 @@ org.eclipse.core.internal.resources.ResourceException: Could not read metadata f
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
 !SUBENTRY 1 org.eclipse.core.resources 4 567 2018-03-12 12:56:53.943
 !MESSAGE Could not read metadata for 'C:\Users\Computer Science\Desktop\Robot Code\GearBot\.metadata\.plugins\org.eclipse.core.resources\.projects\8BitTest\.indexes\e4\e4\2e\17\80\6a\1c\history.index'. Unexpected version: 0.
+
+!ENTRY riolog 1 0 2018-03-12 14:43:12.070
+!MESSAGE exiting listener
