@@ -1,0 +1,16 @@
+package org.usfirst.frc.team6317.robot.commands;
+
+import org.usfirst.frc.team6317.robot.Robot;
+
+import edu.wpi.first.wpilibj.command.CommandGroup;
+
+public class TestAuto extends CommandGroup {
+	public TestAuto() {
+		addSequential(new DriveFor(24, 0.2));
+		addSequential(new Robot.SensorSubsystem.resetEncoders());
+		addSequential(new TurnFor("R", 12));
+		//addSequential(new DriveFor(25, 0.2));
+		//addSequential(new TurnFor("L", 12));
+		//addSequential(new DriveUntil(30, 0.2));
+	}
+}

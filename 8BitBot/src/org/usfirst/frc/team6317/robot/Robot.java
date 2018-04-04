@@ -29,6 +29,11 @@ public class Robot extends IterativeRobot {
 	public static final LiftSubsystem LiftSubsystem = new LiftSubsystem();
 	public static OI oi;
 	
+	//gamedata
+	public static String gameData  = "RRR";
+	
+	public static boolean isOpen;
+	
 	@SuppressWarnings("rawtypes")
 	SendableChooser autoChooser;
 	Command autonomousCommand;
@@ -44,10 +49,16 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 		
 		CameraServer.getInstance().startAutomaticCapture();
+		//starts encoders
+		SensorSubsystem.initEncoders();
 		
+		//makes the sendable chooser
 		autoChooser = new SendableChooser();
-		autoChooser.addDefault("Middle Auto", new MiddleAutonomous());
-		autoChooser.addObject("Test Autonomous", new TestAuto());
+		autoChooser.addDefault("Middle Start", new MiddleAutonomous());
+		autoChooser.addObject("Right Start", new RightAuto());
+		autoChooser.addObject("Left Start", new LeftAuto());
+		autoChooser.addObject("Left Scale", new LeftAutoScale());
+		autoChooser.addObject("Drift", new DriftFixing());
 		SmartDashboard.putData("Auto mode", autoChooser);
 	}
 
@@ -79,9 +90,11 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousInit() {
+		//grabs gamedatas from the field
+		gameData = DriverStation.getInstance().getGameSpecificMessage();
+		//starts the auto selected from auto chooser
 		autonomousCommand = (Command) autoChooser.getSelected();
 		autonomousCommand.start();
-		String gameData = DriverStation.getInstance().getGameSpecificMessage();
 		/*
 		 * String autoSelected = SmartDashboard.getString("Auto Selector",
 		 * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
@@ -110,6 +123,8 @@ public class Robot extends IterativeRobot {
 		// this line or comment it out.
 		if (autonomousCommand != null)
 			autonomousCommand.cancel();
+		gameData = DriverStation.getInstance().getGameSpecificMessage();
+		SmartDashboard.putString("Game Data", Robot.gameData);
 	}
 
 	/**
@@ -118,11 +133,15 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
+		Robot.SensorSubsystem.getDistanceCenti();
+		Robot.SensorSubsystem.getRightDistanceMilli();
+		Robot.SensorSubsystem.getLeftDistanceMilli();
 	}
 
 	/**
 	 * This function is called periodically during test mode
 	 */
+	@SuppressWarnings("deprecation")
 	@Override
 	public void testPeriodic() {
 		LiveWindow.run();

@@ -8,17 +8,25 @@ import org.usfirst.frc.team6317.robot.Robot;
  *
  */
 public class DriveUntil extends Command {
-	private final double centimetersToTravelTo;
+	private final double centimetersToTravelTo, speed;
 	
 	public DriveUntil(double centimeters) {
 		requires(Robot.DriveSubsystem);
 		requires(Robot.SensorSubsystem);
 		centimetersToTravelTo = centimeters;
+		this.speed = 0.5;
+	}
+	
+	public DriveUntil(double centimeters, double speed) {
+		requires(Robot.DriveSubsystem);
+		requires(Robot.SensorSubsystem);
+		centimetersToTravelTo = centimeters;
+		this.speed = speed;
 	}
 
 	@Override
 	protected void initialize() {
-		if (!isFinished()) Robot.DriveSubsystem.drive(0.5);
+		if (!isFinished()) Robot.DriveSubsystem.backDrive(this.speed * 0.9, this.speed);
 	}
 
 	@Override
