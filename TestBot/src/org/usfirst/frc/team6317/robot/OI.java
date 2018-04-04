@@ -24,6 +24,8 @@ public class OI {
 	Button stopIntakeButton = new JoystickButton(controlStick, 2); // bottom right, stop intake
 	Button midLeft = new JoystickButton(controlStick, 3); //top left, kick TEST: Backwards
 	Button printDistance = new JoystickButton(controlStick, 6);
+	Button topRight4 = new JoystickButton(controlStick, 4);
+	Button bottomRight6 = new JoystickButton(controlStick, 6);
 	
 	public OI() {
 		midLeft.toggleWhenPressed(new KickCommand());
@@ -31,6 +33,8 @@ public class OI {
 		topLeft.whenPressed(new SolenoidShift(0));
 		topRight.whenPressed(new SolenoidShift(1));
 		controlTrigger.whenPressed(new SolenoidShift(2));
+		topRight4.whenPressed(new SolenoidShift(3));
+		bottomRight6.whenPressed(new SolenoidShift(4));
 		printDistance.whenPressed(new DistanceGrab());
 	}
 }

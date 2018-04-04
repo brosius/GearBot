@@ -1,16 +1,11 @@
 
 package org.usfirst.frc.team6317.robot;
 
-
-//import org.usfirst.frc.team6317.robot.commands.DistanceTesting;
+import org.usfirst.frc.team6317.robot.commands.*;
 import org.usfirst.frc.team6317.robot.subsystems.*;
-//import org.usfirst.frc.team6317.robot.sensors.SpatialPhidgetGyroWrapper;
-//import com.phidgets.PhidgetException;
-//import com.phidgets.SpatialPhidget;
-//import com.phidgets.event.AttachEvent;
-//import com.phidgets.event.AttachListener;
-//
-//import edu.wpi.first.wpilibj.CameraServer;
+
+import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -28,25 +23,43 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends IterativeRobot {
 	public static final DriveSubsystem DriveSubsystem = new DriveSubsystem();
-	//public static final SensorsSubsystem analogSubsystem = new SensorsSubsystem();
 	public static final Shifter Shifter = new Shifter();
 	public static final Subsystem IntakeSystem = null;
+	public static final SensorsSubsystem SensorSubsystem = new SensorsSubsystem();
+	public static final LiftSubsystem LiftSubsystem = new LiftSubsystem();
 	public static OI oi;
-
+	
+	//gamedata
+	public static String gameData  = "RRR";
+	
+	public static boolean isOpen;
+	
+	@SuppressWarnings("rawtypes")
+	SendableChooser autoChooser;
 	Command autonomousCommand;
-	SendableChooser<Command> chooser = new SendableChooser<>();
+	
 
 	/**
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked"})
 	@Override
 	public void robotInit() {
 		oi = new OI();
-//		chooser.addDefault("Default Auto", new BreakInCommand());
-		//chooser.addDefault("Default Auto", new DistanceTesting());
-		// chooser.addObject("My Auto", new MyAutoCommand());
-		SmartDashboard.putData("Auto mode", chooser);
+		
+		CameraServer.getInstance().startAutomaticCapture();
+		//starts encoders
+		SensorSubsystem.initEncoders();
+		
+		//makes the sendable chooser
+		autoChooser = new SendableChooser();
+		autoChooser.addDefault("Middle Start", new MiddleAutonomous());
+		autoChooser.addObject("Right Start", new RightAuto());
+		autoChooser.addObject("Left Start", new LeftAuto());
+		autoChooser.addObject("Left Scale", new LeftAutoScale());
+		autoChooser.addObject("Drift", new DriftFixing());
+		SmartDashboard.putData("Auto mode", autoChooser);
 	}
 
 	/**
@@ -77,8 +90,11 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousInit() {
-		autonomousCommand = chooser.getSelected();
-
+		//grabs gamedatas from the field
+		gameData = DriverStation.getInstance().getGameSpecificMessage();
+		//starts the auto selected from auto chooser
+		autonomousCommand = (Command) autoChooser.getSelected();
+		autonomousCommand.start();
 		/*
 		 * String autoSelected = SmartDashboard.getString("Auto Selector",
 		 * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
@@ -107,7 +123,8 @@ public class Robot extends IterativeRobot {
 		// this line or comment it out.
 		if (autonomousCommand != null)
 			autonomousCommand.cancel();
-		//SmartDashboard.putNumber("Distance One", analogSubsystem.getDistance());
+		gameData = DriverStation.getInstance().getGameSpecificMessage();
+		SmartDashboard.putString("Game Data", Robot.gameData);
 	}
 
 	/**
@@ -116,11 +133,15 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
+		Robot.SensorSubsystem.getDistanceCenti();
+		Robot.SensorSubsystem.getRightDistanceMilli();
+		Robot.SensorSubsystem.getLeftDistanceMilli();
 	}
 
 	/**
 	 * This function is called periodically during test mode
 	 */
+	@SuppressWarnings("deprecation")
 	@Override
 	public void testPeriodic() {
 		LiveWindow.run();
